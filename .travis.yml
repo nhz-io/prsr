@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '6'
+after_success: npm run coveralls
+deploy:
+  provider: npm
+  email: dev@nhz.io
+  skip_cleanup: true
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+    branch: master
+    repo: nhz-io/prsr

@@ -1,0 +1,46 @@
+{
+  "name": "prsr",
+  "description": "Parser Generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ava --watch --verbose",
+    "coverage": "nyc --reporter=lcov ava",
+    "test": "ava --verbose",
+    "lint": "eslint *.js test --fix",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepublish": "npm run lint && npm run coverage",
+    "prepush": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhz-io/prsr.git"
+  },
+  "pre-push": [
+    "lint",
+    "test"
+  ],
+  "keywords": [
+    "parser",
+    "generator",
+    "prsr",
+    "nhz.io"
+  ],
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nhz-io/prsr/issues"
+  },
+  "homepage": "https://github.com/nhz-io/prsr",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "coveralls": "^2.13.1",
+    "eslint": "^3.14.1",
+    "husky": "^0.14.3",
+    "nyc": "^10.1.2",
+    "pre-push": "^0.1.1"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

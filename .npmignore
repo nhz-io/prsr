@@ -1,0 +1,17 @@
+node_modules
+*.log
+coverage
+.nyc_output
+doc
+tmp
+*.swp
+.editorconfig
+.gitignore
+.gitattributes
+.npmignore
+.nycrc
+.vscode
+test
+.eslintrc
+.travis.yml
+package-lock.json
